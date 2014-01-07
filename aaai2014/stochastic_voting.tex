@@ -1,0 +1,58 @@
+%File: formatting-instruction.tex
+\documentclass[letterpaper]{article}
+\usepackage{aaai}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage{amsmath}
+\usepackage{txfonts}
+\usepackage{latexsym}
+\usepackage{nicefrac}
+
+\frenchspacing
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+\pdfinfo{
+/Title (On the Probability of Bribability)
+/Author (PaperID xxx)}
+\setcounter{secnumdepth}{0}  
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}{Remark}
+
+\newtheorem{definition}{Definition}[section]
+
+\newcommand{\qed}{\hfill \ensuremath{\Box} \\ }
+\newcommand{\proof}[1]{\vskip 4pt \noindent{\it Proof #1.\hskip 4pt }}
+
+
+ \begin{document}
+% The file aaai.sty is the style file for AAAI Press 
+% proceedings, working notes, and technical reports.
+%
+\title{On the Probability of Bribability}
+\author{
+PaperID xxx
+}
+\maketitle
+\begin{abstract}
+
+\end{abstract}
+
+\input{intro.tex}
+\input{related_work.tex}
+\input{model.tex}
+\input{fixed_voters.tex}
+\input{fixed_probability.tex}
+\input{conclusions.tex}
+
+\bibliographystyle{plain}
+\vspace{-1mm}
+{%\small
+\bibliography{budget_limited_auction_bib}
+
+\end{document}

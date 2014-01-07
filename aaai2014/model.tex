@@ -1,0 +1,37 @@
+% !TEX root = stochastic_voting.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Model Description}
+\label{section:model}
+
+\noindent
+In this model, we assume that there are $N = \{1,\dots,N\}$ voters and $C=\{c_1,\dots, c_M\}$ candidates. 
+Each voter $i$ submits a vote $\mathbf{v}_i = (r_i(c_1), r_i(c_2), \dots, r_i(c_M))$, where $r_i$ is a scoring rule that assigns a (voting) score to each candidate $c_m$. 
+Generally speaking, $r_i(c_m)$ represents how much voter $i$ favours candidate $c_m$.
+That is, if the voter prefers candidate $c_{m_1}$ against $c_{m_2}$, then $r_i(c_{m_1}) > r_i(c_{m_2})$.
+
+\textbf{TODO: more precise definition of scoring rule}
+
+In our model, we assume that we do not know the exact realisation of the votes $\mathbf{v}_1,\dots, \mathbf{v}_N $ (e.g., the election has not started yet).
+However, we know that each vote $\mathbf{v}_i$ is drawn from a \emph{known} distribution $D(r)$ (e.g., we have the results of the exit polls).
+Suppose that we control a set of $S = \{s_1,\dots,s_K\}$ bribed voters (apart from the abovementioned $N$ voters), whose votes can be manipulated in any particular way.
+In the present model, we do not focus on the incentives and the techniques of bribery.
+Instead, we assume that these bribed voters are already motivated to follow our orders.
+\textbf{TODO: need some citations to bribery techniques and incentives.} 
+\textbf{We also need to define the vote manipulation algorithm over $S$.} 
+
+We assume that this is a single winner election system, with $c_1$ to be our favoured candidate.
+That is, we aim to manipulate the votes of the bribed voters $S$ such that the probability that $c_1$ wins the elections is sufficiently high.
+In particular, we focus on the following two problems:
+
+\begin{enumerate}
+\item Given $N$, $C$, scoring rule $r$, set of bribed voters $S$ and a manipulation algorithm, what is the probability that $c_1$ can win the elections.
+\item Given $N$, $C$, scoring rule $r$, $0 < \alpha < 1$, and a manipulation algorithm, what is the minimum number of voters we have to bribe in order to guarantee that $c_1$ can win the elections with at least $\alpha$ probability.
+\end{enumerate}
+
+\textbf{TODO list:}
+\begin{itemize}
+\item talk about the scoring rules we use here: stick with the quasi-Borda one...
+\item manipulation algorithms: reverse, uniform, + something else...
+\item say that due to lack of space, we ignore the other scoring rules + algorithms
+\end{itemize}
